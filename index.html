@@ -106,7 +106,7 @@
             console.log('الرقم الجامعي المدخل:', studentID);
 
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'http://localhost:80/1/students.csv', true);
+            xhr.open('GET', 'https://raw.githubusercontent.com/BHosts/Get_Info/main/students.csv', true);
             xhr.responseType = 'blob';
 
             xhr.onload = function() {
