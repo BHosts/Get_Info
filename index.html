@@ -99,7 +99,7 @@
             console.log('الرقم الجامعي المدخل:', studentID);
 
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'http://localhost/1/students.csv', true);
+            xhr.open('GET', 'https://raw.githubusercontent.com/BHosts/Get_Info/main/students.csv', true);
             xhr.responseType = 'text';
 
             xhr.onload = function() {
@@ -120,7 +120,7 @@
                     // إرسال البيانات المحدثة إلى الخادم لحفظها في ملف CSV
                     const updatedCSV = convertToCSV(students);
                     const updateXhr = new XMLHttpRequest();
-                    updateXhr.open('GET', 'https://github.com/BHosts/Get_Info/blob/aca13162868a669609d05bbd63abb06be5308627/students.csv', true);
+                    updateXhr.open('GET', 'https://raw.githubusercontent.com/BHosts/Get_Info/main/students.csv', true);
                     updateXhr.setRequestHeader('Content-Type', 'text/csv');
                     updateXhr.onload = function() {
                         if (updateXhr.status === 200) {
