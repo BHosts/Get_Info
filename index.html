@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -112,8 +112,7 @@
                 if (studentRow) {
                     console.log('تم العثور على الطالب:', studentRow);
 
-                    // تحديث حالة الطالب إلى 'Done'
-                    studentRow.Status = 'Done';
+                    // لا تقم بعمل أي تعديلات هنا
 
                     console.log('البيانات المحدثة:', students);
 
@@ -125,7 +124,6 @@
                     updateXhr.onload = function() {
                         if (updateXhr.status === 200) {
                             console.log('تم تحديث الملف بنجاح');
-                            localStorage.setItem('student', JSON.stringify(studentRow));
                             window.location.href = 'student.html';
                         } else {
                             console.error('حدث خطأ أثناء تحديث الملف');
